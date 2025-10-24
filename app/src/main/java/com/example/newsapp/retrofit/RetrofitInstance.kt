@@ -6,7 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 object RetrofitInstance {
 
     private const val BASE_URL =
-        "https://jsonplaceholder.typicode.com/posts"
+        "https://jsonplaceholder.typicode.com"
 
     val api: ApiService by lazy{                                                                    // "by lazy": delays the initialization of the property until
                                                                                                     //             it is first accessed.
