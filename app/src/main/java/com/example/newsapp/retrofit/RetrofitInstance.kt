@@ -8,16 +8,19 @@ object RetrofitInstance {
     private const val BASE_URL =
         "https://jsonplaceholder.typicode.com/posts"
 
-    val api: ApiService by lazy{                                                        // "by lazy": delays the initialization of the property until
-                                                                                        //             it is first accessed.
+    val api: ApiService by lazy{                                                                    // "by lazy": delays the initialization of the property until
+                                                                                                    //             it is first accessed.
 
         val retrofit = Retrofit.Builder()
             .baseUrl(BASE_URL)
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-        retrofit.create(ApiService::class.java)
+            .addConverterFactory(GsonConverterFactory.create())                             // adds converter factory for serialization and deserl. of objects
+            .build()                                                                                 // and "GsonConverterFactory" converts JSON responses into KOTLIN objects and vice versa
+
+        retrofit.create(ApiService::class.java)                                                      // ApiService::class.java -> specifies the interface for retrofit to generate the implementation
 
     }
 
 
 }
+
+

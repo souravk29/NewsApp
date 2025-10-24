@@ -16,11 +16,7 @@ import com.example.newsapp.ui.theme.NewsAppTheme
 
 
 
-
-
 /*
-
-
 
  STEPS to use RETROFIT to fetch data:
 
@@ -36,12 +32,7 @@ import com.example.newsapp.ui.theme.NewsAppTheme
                 3. Retrofit instance: Since we are using retrofit for the network call, we create a
                                       class that provides that instance of the retrofit
 
-
-
  */
-
-
-
 
 
 
