@@ -19,13 +19,22 @@ import com.example.newsapp.ui.theme.NewsAppTheme
 
 
 /*
-                STEPS to use RETROFIT to fetch data
 
-                1. Data class
 
-                2. API service interface
 
-                3. Retrofit instance
+ STEPS to use RETROFIT to fetch data:
+
+
+                1. Data class: for fetching response we need to create pojo class that automatically
+                               parse the JSON data using GSON in background
+
+
+                2. API service interface: To define our methods that will be used for network transactions.
+                                          Also known as API interface.
+
+
+                3. Retrofit instance: Since we are using retrofit for the network call, we create a
+                                      class that provides that instance of the retrofit
 
 
 

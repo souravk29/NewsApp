@@ -3,13 +3,15 @@ package com.example.newsapp.retrofit
 import retrofit2.http.GET
 
 
+
+/*                       2nd STEP                      */
+
 /*
 
 https://jsonplaceholder.typicode.com/posts :
 
-                        Base url = "jsonplaceholder.typicode.com"
+                        Base url = "https://jsonplaceholder.typicode.com/"
                         Endpoint = "posts"
-
  */
 
 interface ApiService {
