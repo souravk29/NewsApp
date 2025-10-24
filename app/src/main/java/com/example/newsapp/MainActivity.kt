@@ -5,13 +5,22 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.systemBarsPadding
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.example.newsapp.screens.PostScreen
 import com.example.newsapp.ui.theme.NewsAppTheme
 import com.example.newsapp.viewmodel.PostViewModel
@@ -47,9 +56,28 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
 
-            PostScreen(viewModel = myViewModel)
+            Column(
+                modifier = Modifier.padding(4.dp).systemBarsPadding()
+            ) {
+                Header()
 
+                PostScreen(viewModel = myViewModel)
+            }
         }
     }
 }
 
+
+@Composable
+fun Header(){
+
+    Column(
+        modifier = Modifier.fillMaxWidth().padding(6.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
+
+    ) {
+        Text(text = "News App", fontWeight = FontWeight.Bold, fontSize = 30.sp, color = Color.Blue)
+        Text(text = "Get Latest News", fontSize = 18.sp)
+    }
+
+}
